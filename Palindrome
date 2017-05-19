@@ -1,13 +1,10 @@
 
 public class Palindrome {
-
-	/**
-	 * @param args
-	 */
+	
 	public static void main(String[] args) {
+		System.out.println(p(1234554321));
 		System.out.println(p("Malayalam"));
-
-
+		System.out.println(p("German"));
 	}
 	
 	public static boolean p(String w) {
@@ -23,13 +20,18 @@ public class Palindrome {
 				b = false;
 				break;
 			}
-		}
-		
-		
-		return b;
-		
+		}		
+		return b;		
 	}
 	
-	
-
+	public static boolean p(int w) {	
+		int reverse = 0;		
+		for(int temp = w;temp > 0; temp=temp/10) {
+			reverse = 10 * reverse + temp%10;			
+			System.out.println(temp%10 + "  " + reverse + "   " + temp);		
+		}
+		 if (reverse == w)
+			 return true;		
+		return false;		
+	}
 }
