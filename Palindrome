@@ -1,0 +1,35 @@
+
+public class Palindrome {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		System.out.println(p("Malayalam"));
+
+
+	}
+	
+	public static boolean p(String w) {
+		int halfway = w.length()/2;
+		boolean b = true;
+		w = w.toLowerCase();
+		for(int i = 0; i<=halfway; i++) {
+			System.out.println(w.charAt(i));
+			System.out.println(w.charAt(w.length()- (i+1)));
+			if(w.charAt(i) == w.charAt(w.length()- (i+1))) {
+				continue;
+			} else {
+				b = false;
+				break;
+			}
+		}
+		
+		
+		return b;
+		
+	}
+	
+	
+
+}
