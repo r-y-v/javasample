@@ -5,6 +5,7 @@ public class Palindrome {
 		System.out.println(p(1234554321));
 		System.out.println(p("Malayalam"));
 		System.out.println(p("German"));
+		System.out.println(p("The program has ended"));
 	}
 	
 	public static boolean p(String w) {
